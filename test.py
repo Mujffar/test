@@ -238,7 +238,7 @@ if __name__ == '__main__':
 	
 # Add all JSON data to a dictionary
 data = {
-    "machine_id": json.loads(machine_id_json),
+    "machine_id": json.loads(machine_id),
     "ram_info": json.loads(ram_json),
     "default_route": json.loads(default_route_json),
     "default_metric": json.loads(default_metric_json),
