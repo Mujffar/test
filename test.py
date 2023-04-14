@@ -10,8 +10,9 @@ app = Flask(__name__)
 @app.route('/')
 def get_machine_id():
     with open('/etc/machine-id', 'r') as f:
-        machine_id = f.read().strip()
-    return json.dumps({'machine_id': machine_id})
+        return {'machine_id': f.read().strip()}
+
+machine_id_json = json.dumps(get_machine_id())
 
 
     #Get Machine ID
@@ -238,7 +239,7 @@ if __name__ == '__main__':
 	
 # Add all JSON data to a dictionary
 data = {
-    "machine_id": json.loads(machine_id),
+    "machine_id": json.loads(machine_id_json),
     "ram_info": json.loads(ram_json),
     "default_route": json.loads(default_route_json),
     "default_metric": json.loads(default_metric_json),
