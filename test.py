@@ -184,24 +184,6 @@ if __name__ == '__main__':
 	
 	
 	
-#Get Network Interfaces
-
-# Check if there are at least two network interfaces
-if len(interfaces) < 2:
-    print("Error: at least two network interfaces are required.")
-else:
-    # Create a dictionary with network interface information
-    interface_info = {
-        "network_interfaces": interfaces
-    }
-    
-    # Convert dictionary to JSON
-    network_interface_json = json.dumps(interface_info)
-    
-	
-	
-	
-	
 # Has SSE SUPPORT
 
 def has_sse42_support():
@@ -263,7 +245,6 @@ data = {
     "kernel_io_module": json.loads(kernel_io_module_json),
     "interfaces": json.loads(interface_json),
     "network_card": json.loads(network_card_json),
-    "network_interface_json": json.loads(network_interface_json),
     "sse42_json": json.loads(sse42_json),
     "cpu_json": json.loads(cpu_json),
     "wifi_json": json.loads(wifi_json)
