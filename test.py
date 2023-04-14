@@ -186,9 +186,6 @@ if __name__ == '__main__':
 	
 #Get Network Interfaces
 
-# Get all network interfaces on the system
-interfaces = netifaces.interfaces()
-
 # Check if there are at least two network interfaces
 if len(interfaces) < 2:
     print("Error: at least two network interfaces are required.")
