@@ -9,4 +9,5 @@ def get_machine_id():
     with open('/etc/machine-id', 'r') as f:
         return {'machine_id': f.read().strip()}
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
+
