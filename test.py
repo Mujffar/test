@@ -244,7 +244,6 @@ data = {
     "default_route": json.loads(default_route_json),
     "default_metric": json.loads(default_metric_json),
     "kernel_io_module": json.loads(kernel_io_module_json),
-    "network_card": json.loads(network_card_json),
     "sse42_json": json.loads(sse42_json),
     "cpu_json": json.loads(cpu_json),
     "wifi_json": json.loads(wifi_json)
